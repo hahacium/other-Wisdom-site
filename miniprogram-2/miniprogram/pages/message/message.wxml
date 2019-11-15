@@ -1,0 +1,30 @@
+<block wx:if="{{show}}">
+  <!--安全管理员显示-->
+  <view class="select" wx:if="{{gly}}">
+    <image src="../../img/jg.png"></image>
+    <view>安全警告</view>
+    <text class="select-right">{{sum}}</text>
+    <text class="select-left" bindtap="danger">{{title}}</text>
+  </view>
+  <!--聊天信息推送-->
+  <view class="item" wx:for="{{4}}" wx:key="index" hidden="{{!aqyh}}">
+    <image src="/img/index/cx-10.jpg"></image>
+    <view>
+      <text class="item-top">张三</text>
+      <text class="item-right">10：38：01</text>
+      <text class="item-bottom">去把外网防护栏装了</text>
+    </view>
+  </view>
+  <!--点击显示安全隐患-->
+  <view hidden="{{aqyh}}">
+    <view class="item" wx:for="{{user}}" wx:key="index" id="{{index}}">
+      <image src="/img/index/cx-10.jpg"></image>
+      <view>
+        <text class="item-top">{{item.name}}</text>
+        <text class="item-right">{{item.time}}</text>
+        <text class="item-bottom">{{item.des}}</text>
+      </view>
+    </view>
+    <button type="primary" bindtap="btn">测试监听</button>
+  </view>
+</block>

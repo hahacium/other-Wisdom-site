@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="xcx-dev-api" />
+        <module name="xcx-dev-pojo" />
+        <module name="xcx-dev-service" />
+        <module name="xsx-dev-timertask" />
+        <module name="xcx-dev-mapper" />
+        <module name="xcx-dev-common" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="common" target="1.8" />
+      <module name="mybatis-generatorConfig" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="common" options="-parameters" />
+      <module name="xcx-dev-api" options="-parameters" />
+      <module name="xcx-dev-common" options="-parameters" />
+      <module name="xcx-dev-mapper" options="-parameters" />
+      <module name="xcx-dev-pojo" options="-parameters" />
+      <module name="xcx-dev-service" options="-parameters" />
+      <module name="xsx-dev-timertask" options="-parameters" />
+    </option>
+  </component>
+</project>

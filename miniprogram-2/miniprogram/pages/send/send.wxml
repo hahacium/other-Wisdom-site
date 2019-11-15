@@ -1,0 +1,24 @@
+<view class="body">
+<view class="header">
+  <image src="{{faceUrl}}" bindtap="btn"></image>
+  <view>
+    <text class="header-top">{{name}}</text>
+    <text class="header-bottom">昵称：{{nickname}}</text>
+    <text class="header-bottom">账号：{{username}}</text>
+     <text class="header-bottom">手机号：{{phone}}</text>
+  </view>
+</view>
+
+<view class="item">
+ 设置备注和标签<text>></text>
+</view>
+
+<view class="item">
+ 查看更多<text>></text>
+</view>
+<view class="item">
+ 个人信息<text>></text>
+</view>
+
+<view class="foot"><image src="/img/me/xx.png"/><text>发信息</text></view>
+</view>

@@ -1,0 +1,15 @@
+<view class="header">
+<view class="img"><image src="/img/me/user.png" class="img"></image></view>
+  <form bindsubmit="submit">
+    <view class="txt">
+      <image src="/img/me/username.png" class="images" />
+      <input name="username" placeholder="请输入账号" value="10001" />
+    </view>
+    <view class="txt">
+      <image src="/img/me/password.png" class="images"/>
+      <input name="password" password="{{show}}" placeholder="请输入密码" value="123456" />
+      <image src="{{src?'/img/me/denl.png':'/img/me/denl2.png'}}" class="eyes" bindtap="show"/>
+    </view>
+    <button form-type="submit" type="primary">登录</button>
+  </form>
+</view>

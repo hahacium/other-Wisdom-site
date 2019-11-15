@@ -1,0 +1,41 @@
+<view style='width:100%;height:100%;'>
+
+  <video id="myVideo" src="{{src}}" controls="{{true}}" autoplay="{{true}}" loop="{{true}}" enable-progress-gesture="{{false}}" style='width:100%;height:100%;' objectFit='{{cover}}' show-fullscreen-btn='{{false}}' show-play-btn='{{false}}' show-mute-btn='{{false}}'
+    show-center-play-btn='{{true}}' show-play-btn='{{false}}'>
+
+    <cover-view class='container'>
+      <!-- 上传视频 -->
+      <cover-image src='/img/tx/camera.png' style='width:50rpx;height:50rpx;' bindtap='upload'></cover-image>
+
+      <!-- 搜索按钮 -->
+      <cover-image src='/img/tx/search.png' style='width:45rpx;height:45rpx;' bindtap='showSearch'></cover-image>
+
+    </cover-view>
+
+    <cover-view class='container-me'>
+    <!-- 头像 -->
+            <cover-image class="face" src='{{serverUrl}}{{videoInfo.faceImage}}'></cover-image>
+      <!-- 分享按钮 -->
+      <cover-image class="size-me" src='/img/tx/share.png' style='margin-top:30rpx;' bindtap='shareMe'></cover-image>
+
+    </cover-view>
+
+    <cover-view class='container-words'>
+
+      <cover-view>@{{videoInfo.name}}</cover-view>
+      <cover-view class='video-desc'>{{videoInfo.videoDesc}}</cover-view>
+
+    </cover-view>
+
+    <cover-view class='container-bottom'>
+      <!-- 首页按钮 -->
+      <cover-image class='' src='/img/tx/index.png' class="size-bottom" bindtap='showIndex'></cover-image>
+
+      <!-- 首页按钮 -->
+      <cover-image class='' src='/img/tx/follow.png' class="size-bottom" bindtap='showIndex'></cover-image>
+
+      <!-- 我的按钮 -->
+      <cover-image class='' src='/img/tx/mine.png' class="size-bottom" bindtap='showMine'></cover-image>
+    </cover-view>
+  </video>
+</view>

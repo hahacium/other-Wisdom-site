@@ -1,0 +1,27 @@
+.header{
+  height: 40px;
+  line-height: 40px;
+  background-color: #eee;
+  width: 100%;
+  font-weight: bolder;
+}
+button{
+  width: 41%;
+  margin: 0;
+  margin-left: 6%;
+  margin-top: 10px;
+}
+.item{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 10px;
+}
+.foot{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  margin: 0;
+  z-index: 99;
+  border-radius: 0;
+}

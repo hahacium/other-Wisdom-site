@@ -1,0 +1,29 @@
+<view hidden="{{!show}}">
+  <view class="header">
+    <image src="/img/tx/ss.png" bindtap="chazhao"></image>
+    <input placeholder="图纸名称搜索" value="" bindinput="search"/>
+  </view>
+  <view class="jieguo">全部分类</view>
+  <view class="title">
+    <view wx:for="{{data}}" wx:key="index">
+      <image src="{{serverUrl}}{{item.image}}" bindtap="sos" id="{{item.id}}" data-name = "{{item.name}}"/>
+      <text>{{item.name}}</text>
+    </view>
+  </view>
+  <view class="jieguo">{{jieguo}}</view>
+  <scroll-view scroll-y>
+    <block wx:for="{{picture}}" wx:key="{{index}}">
+      <view class="item" bindtap="btn" data-img="{{item.image}}">
+        <image src="/img/index/cx-6.jpg" />
+        <view>
+          <text class="item-top">{{item.name}}</text>
+          <text class="item-bottom">设计者：{{item.designer}}</text>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+</view>
+<view hidden="{{show}}" class="xgtp">
+  <image src="{{src}}"></image>
+  <view bindtap="fh">返回</view>
+</view>

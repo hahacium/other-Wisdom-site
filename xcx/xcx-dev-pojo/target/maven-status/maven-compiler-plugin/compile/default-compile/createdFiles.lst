@@ -1,0 +1,12 @@
+com\gpc\pojo\Users.class
+com\gpc\pojo\UsersReport.class
+com\gpc\pojo\DepartmentEmployee.class
+com\gpc\pojo\vo\VideosVO.class
+com\gpc\pojo\Picture.class
+com\gpc\pojo\vo\UsersVO.class
+com\gpc\pojo\SearchRecords.class
+com\gpc\pojo\Videos.class
+com\gpc\pojo\CheckIn.class
+com\gpc\pojo\SiteCheckIn.class
+com\gpc\pojo\vo\DepartmentEmployeeVo.class
+com\gpc\pojo\AttendanceRecord.class

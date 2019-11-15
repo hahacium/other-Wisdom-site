@@ -1,0 +1,69 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/recom/recom",
+    "pages/message/message",
+    "pages/picture/picture",
+    "pages/showvideo/showvideo",
+    "pages/logManagement/logManagement",
+    "pages/mine/mine",
+    "pages/show/show",
+    "pages/checkIn/checkIn",
+    "pages/send/send",
+    "pages/report/report",
+    "pages/feedback/feedback",
+    "pages/chatroom/chatroom",
+    "pages/chooseBgm/chooseBgm",
+    "pages/video/video",
+    "pages/searchVideo/searchVideo",
+    "pages/videoinfo/videoinfo",
+    "pages/search/search",
+    "pages/me/me",
+    "pages/home/home"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#3bade6",
+    "navigationBarTitleText": "工程监测",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "backgroundColor": "#3bade6",
+    "color": "#fff",
+    "selectedColor": "#f00c0c",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/img/tar/sy-0.png",
+        "selectedIconPath": "/img/tar/sy-1.png"
+      },
+      {
+        "pagePath": "pages/recom/recom",
+        "text": "通讯",
+        "iconPath": "/img/tar/tx-0.png",
+        "selectedIconPath": "/img/tar/tx-1.png"
+      },
+      {
+        "pagePath": "pages/message/message",
+        "text": "消息",
+        "iconPath": "/img/tar/xx-0.png",
+        "selectedIconPath": "/img/tar/xx-1.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "/img/tar/me-0.png",
+        "selectedIconPath": "/img/tar/me-1.png"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "请确认授权"
+    }
+  },
+  "sitemapLocation": "sitemap.json",
+  
+  "debgger": false
+}

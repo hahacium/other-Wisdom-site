@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gpc.mapper.AttendanceRecordMapper" >
+  <resultMap id="BaseResultMap" type="com.gpc.pojo.AttendanceRecord" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" property="id" jdbcType="VARCHAR" />
+    <result column="uid" property="uid" jdbcType="VARCHAR" />
+    <result column="month_time" property="monthTime" jdbcType="INTEGER" />
+    <result column="sum" property="sum" jdbcType="INTEGER" />
+  </resultMap>
+
+  <resultMap id="map" type="com.gpc.pojo.AttendanceRecord" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" property="id" jdbcType="VARCHAR" />
+    <result column="uid" property="uid" jdbcType="VARCHAR" />
+    <result column="month_time" property="monthTime" jdbcType="INTEGER" />
+    <result column="sum" property="sum" jdbcType="INTEGER" />
+    <collection property="checkIn" ofType="com.gpc.pojo.CheckIn">
+      <id column="bid" property="id"/>
+      <result property="userId" column="user_id"/>
+      <result property="finishTime" column="finish_time"/>
+      <result property="finishTimeStr" column="finish_time_str"/>
+      <result property="status" column="status"/>
+    </collection>
+  </resultMap>
+
+  <select id="selectByUserId" resultMap="map" >
+    select a.month_time,a.sum , b.id bid , b.user_id,b.finish_time,b.finish_time_str,b.status
+    from
+    attendance_record a
+    left outer join
+    check_in b
+    on
+    a.uid = b.user_id
+    where
+    a.uid = #{id}
+  </select>
+</mapper>

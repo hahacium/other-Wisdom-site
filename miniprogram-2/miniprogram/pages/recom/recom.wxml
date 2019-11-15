@@ -1,0 +1,22 @@
+<view class="header">
+<image src="/img/tx/ss.png"></image>
+  <input bindfocus="showSearch" value=""/>
+  <view bindtap="chatroom">聊天室</view>
+</view>
+<view class="content">
+ <!--左边-->
+  <view class="left">
+    <view wx:for = "{{firstLabel}}" wx:key="index">
+      <view id="{{item.id}}" class="{{select==item.id?'select':''}}" bindtap="btn">{{item.labelName}}</view>
+    </view>
+  </view>
+  <!--右边-->
+  <view class="right">
+    <scroll-view scroll-y>
+      <view class="right-item" wx:for="{{secondLabel}}" bindtap="tz" id="{{item.users.id}}" wx:key="index">
+        <image src="{{serverUrl}}{{item.users.faceImage}}"></image>
+        <view >{{item.labelName}}</view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

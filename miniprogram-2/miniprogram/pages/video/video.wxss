@@ -1,0 +1,75 @@
+/* pages/video/video.wxss */
+.item-container {
+  position: relative;
+  padding-bottom: 50px;
+}
+
+.cover {
+  width: 100%;
+  height: 400rpx;
+  display: block;
+}
+
+.back-img {
+  display: block;
+  background-color: black;
+}
+
+.desc {
+  margin-top: -40rpx;
+  margin-bottom: 10rpx;
+  display: flex;
+  align-items: center;
+}
+
+.desc .right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.desc .faceName {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.title {
+  font-size: 30rpx;
+  margin-top: 10rpx;
+  margin-left: 20rpx;
+  width: 600rpx;
+}
+
+.myface {
+  display: block;
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 30rpx;
+  margin-top: 10rpx;
+  margin-right: 20rpx;
+}
+
+.nickname {
+  font-size: 20rpx;
+  margin-top: 6rpx;
+  margin-right: 20rpx;
+  color: darkgray;
+}
+
+.foot {
+  position: fixed;
+  bottom: 0;
+  height: 50px;
+  width: 100vw;
+  background-color: #000;
+  text-align: center;
+  line-height: 50px;
+}
+
+.foot image {
+  height: 40px;
+  width: 40px;
+  margin: 5px auto;
+}

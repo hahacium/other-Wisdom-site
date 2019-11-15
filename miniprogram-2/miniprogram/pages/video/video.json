@@ -1,0 +1,6 @@
+{
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
+  "onReachBottomDistance": 5,
+  "navigationBarTitleText": "隐蔽工程"
+}

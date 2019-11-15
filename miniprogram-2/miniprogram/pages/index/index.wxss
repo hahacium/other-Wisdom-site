@@ -1,0 +1,64 @@
+.header{
+  height: 170px;
+  width: 100%;
+}
+.header image{
+  height: 180px;
+  width: 100%;
+}
+.content{
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.img{
+  width: 20%;
+  height: 60px;
+  box-sizing: border-box;
+  margin-bottom: 5px;
+}
+.img image{
+  border-radius: 10px;
+  margin-left: 20%;
+  width: 60%;
+  height: 70%;
+}
+.img view{
+  height: 25%;
+  text-align: center;
+  font-size: 24rpx;
+}
+.foot{
+  margin-top: 20px;
+  background-color: #ddd;
+}
+.title{
+  height: 35px;
+  line-height: 35px;
+  color: #fff;
+  font-size: 40rpx;
+  font-weight: bold;
+}
+.title image{
+  margin-left: 5px;
+  margin-top: 6px;
+  float: left;
+  height: 21px;
+  width: 21px;
+  margin-right: 10px;
+}
+.item{
+  height: 280px;
+  background-color: white;
+  display: flex;
+}
+.item image{
+  height: 90%;
+  width: 47%;
+  margin: auto auto;
+  margin-left: 2%;
+  margin-right: 0;
+}
+swiper{
+  height: 170px;
+}

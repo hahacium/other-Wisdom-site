@@ -1,0 +1,66 @@
+<block wx:if="{{rlsb && pz}}">
+  <view class="header">
+    <view class="header-top">
+      <text class="top">{{qdatat}}</text>
+      <text class="bottom">————本月已签到————</text>
+      <text class="bottom">个人总签到天数{{sum}}</text>
+      <text class="btn" bindtap="btn">{{biaoti}}</text>
+    </view>
+  </view>
+
+  <view class="header-bottom">
+    <scroll-view scroll-x scroll-left="{{srcoll}}">
+      <view style="display: flex;">
+        <view class="tiao" wx:for="{{date}}" wx:key="index">
+          <text class="{{'kk'}}"></text>
+          <text class="{{(index+1)==qdata[index*1]?'yy-1':'yy'}}"></text>
+          <text class="txt">{{item+1}}号</text>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+
+
+  <view class="foot">
+    <image src="{{faceUrl}}"></image>
+    <view>
+      <text class="foot-left">签到记录</text>
+      <text class="foot-right">{{nickname}}</text>
+      <text class="gd">更多</text>
+    </view>
+  </view>
+  <view class="xx" wx:for="{{time}}" wx:key="index">
+    签到时间：{{item.timeStr}}
+  </view>
+</block>
+
+
+<view class="tanchuan" wx:if="{{!rlsb}}">
+  <camera wx:if="{{miao!=5}}" device-position="front" flash="off" binderror="error" class="xj" />
+  <cover-image src="{{src}}" class="rr" wx:if="{{miao!=5}}" />
+  <view class="over" wx:else>
+    <image src="{{src}}" class="rr2" />
+    <view class="{{miao!=5?'hhr':'hr'}}" animation="{{ani}}"></view>
+  </view>
+  <view class="btn-top">{{title}}{{miao==5?'':miao}}</view>
+</view>
+
+<view class="page-body" wx:if="{{!pz}}">
+  <camera device-position="front" flash="off" binderror="error" class="xjpx"></camera>
+  <view class="btn-area">
+    <button type="primary" bindtap="take" style='background-color:#31859c;width:80%'>请拍照</button>
+  </view>
+  <view class="foots">
+    <!--<view class="foots-header">当前信息</view>-->
+    <block wx:if="{{!disabled}}">
+      <view class="foots-body">
+        <image src="{{src}}"></image>
+        <view class="foots-rigt">
+          <view style="text-align:center">
+            <text style="font-size:16px;font-weight:bold;">当前地址为：</text>{{liaot}}</view>
+        </view>
+      </view>
+      <button type="primary" disabled="{{ddqd}}" class="foot-btn" wx:if="{{!disabled}}" bindtap="xxrq">签到</button>
+    </block>
+  </view>
+</view>

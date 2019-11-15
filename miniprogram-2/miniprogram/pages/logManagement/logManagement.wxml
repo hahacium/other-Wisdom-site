@@ -1,0 +1,101 @@
+<block>
+  <view class="header">
+    <view class="header-top">{{name}}
+      <text>(未完工)</text>
+    </view>
+    <view class="header-con">
+      <view class="con-top">
+        <text class="top-left">施工起始日:{{start}}</text>
+        <text class="top-right">终止日:{{over}}</text>
+      </view>
+      <image src="/img/sgrz/sg.png"></image>
+      <progress border-radius="10" class="hr" percent="{{jindu}}" active show-info/>
+      <view class="con-bottom">
+        <text wx:for="{{zy}}" wx:key="index">*{{item}}</text>
+      </view>
+    </view>
+    <view class="header-bottom">
+      <text class="hb-left">项目负责人: {{fzr}}</text>
+      <text class="hb-right">核审人: {{hsr}}</text>
+    </view>
+  </view>
+  <view class="btn" bindtap="btn" hidden="{{!sgrz}}">{{title}}</view>
+  <block wx:if="{{sgrz}}">
+    <view class="foot">
+      <view class="item" wx:for="{{xgrz}}" wx:key="index">
+        <view class="item-top">
+          <text>当天天气：{{item.tq}}</text>
+          <text>风级：{{item.fj}}</text>
+          <text>施工时段：{{item.sd}}</text>
+        </view>
+        <view>施工项目：{{item.xgxm}}</view>
+        <view class="item-con">施工备注：
+          <text>{{item.bz}}</text>
+        </view>
+        <view class="item-con">施工成员：
+          <text>{{item.cy}}</text>
+        </view>
+        <view>
+          <text class="item-left">施工负责人：{{item.fzr}}</text>
+          <text class="item-right">施工时间：{{item.over}}</text>
+        </view>
+      </view>
+    </view>
+  </block>
+  <block wx:else>
+    <view class="sg">
+      <view style=" text-align: right;padding:0 10px 0 0;font-size:20px;">
+        <text bindtap="xx">x</text>
+      </view>
+      <view class="cg-con">
+        <text>温度：{{temp}}℃</text>
+        <text>风级：{{windpower}}</text>
+      </view>
+      <form bindsubmit="tzsg" data-src="{{src}}" data-option="{{text}}">
+
+        <view class="cons-top">
+          <text>施工负责人：</text>
+          <view>
+            <input name="fzr"></input>
+          </view>
+        </view>
+
+        <view class="cons-top">
+          <text>施工项目：</text>
+          <text bindtap="select">{{text}}</text>
+        </view>
+
+
+        <view class="cons-top">
+          <text>施工成员：</text>
+          <view>
+            <textarea name="cy" hidden="{{pz}}"></textarea>
+          </view>
+        </view>
+        <view class="cons-top">
+          <text>施工备注：</text>
+          <view>
+            <textarea name="bz" hidden="{{pz}}"></textarea>
+          </view>
+        </view>
+
+        <view class="cons-top">
+          <text>完工图片：</text>
+          <view class="img">
+            <block wx:for="{{src}}" wx:key="index">
+              <image src="{{item}}" bindtap="check"></image>
+            </block>
+          </view>
+        </view>
+        <button class="tjsg" form-type="submit">添加施工日志</button>
+      </form>
+      <scroll-view scroll-y hidden="{{status}}">
+        <view id="{{item}}" wx:for="{{option}}" wx:key="index" bindtap="option">{{item}}</view>
+      </scroll-view>
+    </view>
+  </block>
+</block>
+<view class="pzxj" wx:if="{{pz}}">
+  <camera device-position="back" binderror="error" class="xj" />
+  <button class="pz-btn" bindtap="search">拍照</button>
+</view>

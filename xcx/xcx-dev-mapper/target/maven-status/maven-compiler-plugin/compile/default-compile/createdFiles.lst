@@ -1,0 +1,10 @@
+com\gpc\mapper\SiteCheckInMapper.class
+com\gpc\mapper\VideosMapperCustom.class
+com\gpc\mapper\CheckInMapper.class
+com\gpc\mapper\AttendanceRecordMapper.class
+com\gpc\mapper\SearchRecordsMapper.class
+com\gpc\mapper\PictureMapper.class
+com\gpc\mapper\UsersReportMapper.class
+com\gpc\mapper\VideosMapper.class
+com\gpc\mapper\DepartmentEmployeeMapper.class
+com\gpc\mapper\UsersMapper.class

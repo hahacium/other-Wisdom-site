@@ -1,0 +1,46 @@
+<view class="content">
+  <block wx:if="{{status}}">
+    <view class="content-header">
+      <image src="/img/index/cx-10.jpg" bindtap="btn"></image>
+      <view style="margin-left:15px;">
+        <view class="header-con">点击登录头像登录</view>
+      </view>
+    </view>
+  </block>
+  <!--登录成功后显示-->
+  <block wx:else>
+    <view class="content-header">
+      <image src="{{faceUrl}}" bindtap='changeFace'></image>
+      <view style="margin-left:15px;">
+        <view class="header-top">{{nickname}}</view>
+        <view class="header-bottom">账号： {{name}} </view>
+      </view>
+    </view>
+  </block>
+  <view class="cont-body" bindtap="money">
+    <image src="/img/me/xxx.png" bindtap="money"></image>
+    工资
+    <text>></text>
+  </view>
+  <view class="cont-body" bindtap="ill">
+    <image src="/img/me/gs.png" bindtap="ill"></image>
+    工伤上报
+    <text>></text>
+  </view>
+  <view class="cont-body" bindtap="report">
+    <image src="/img/me/wtfk.png" bindtap="report"></image>
+    问题反馈
+    <text>></text>
+  </view>
+  <view class="cont-body" bindtap="check">
+    <image src="/img/me/qd.png" bindtap="check"></image>
+    每月签到
+    <text>></text>
+  </view>
+  <view class="cont-body" bindtap="personalInfo">
+    <image src="/img/me/grxx.png" bindtap="personalInfo"></image>
+    个人信息
+    <text>></text>
+  </view>
+  <view wx:if="{{!status}}" class="content-foot" bindtap="exit">退出登录</view>
+</view>

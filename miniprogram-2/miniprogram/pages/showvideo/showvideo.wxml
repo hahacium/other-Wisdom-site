@@ -1,0 +1,10 @@
+<view hidden="{{show}}">
+<view class="item" wx:for="{{data}}" wx:key="index">
+    <view class="header">{{item.type}}</view>
+    <button type="{{itemName.status?'primary':'warn'}}" bindtap="btn" wx:for="{{item.show}}" wx:key="id" wx:for-index="id" wx:for-item="itemName" data-demo="{{itemName}}" data-name="{{item.type}}">{{itemName.name}}</button>
+  </view>
+</view>
+<view style="width: 100vw; height: 99vh;" hidden="{{!show}}">
+ <video id="lol" src="http://139.159.141.225:8081/a.mp4" object-fit="cover" show-center-play-btn="{{false}}" autoplay="{{true}}" loop="{{true}}" style="width: 100%; height: 100%;"/>
+ <button bindtap="bf" type="warn" class="foot">断开返回</button>
+</view>

@@ -1,0 +1,50 @@
+server:
+  port: 8081
+  tomcat:
+    uri-encoding: UTF-8
+  servlet:
+    context-path: /
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.gpc.pojo
+spring:
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 1000MB
+  datasource:
+    druid:
+      username: root
+      password: 123
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://139.9.76.189:3306/bases?useUnicode=true&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+      initial-size: 1
+      min-idle: 1
+      max-active: 20
+      test-on-borrow: false
+  redis:
+    database: 1
+    host: 139.9.76.189
+    password: Qwe4444*
+    port: 6389
+    timeout: 10000
+    jedis:
+      pool:
+        max-idle: 8
+        max-active: 8
+        max-wait: -1
+        min-idle: 0
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+mapper:
+  mappers: com.gpc.utils.MyMapper
+  not-empty: false
+  identity: MYSQL
+pagehelper:
+  helper-dialect: mysql
+  support-methods-arguments: true
+  params: count=countSql
+  #spring.jackson.date-format=yyyy-MM-dd HH:mm:ss
+
+  #spring.jackson.time-zone=GMT+8

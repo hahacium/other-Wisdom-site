@@ -1,0 +1,9 @@
+<view class="right">
+  <view class="bm">
+    <view class="right-item" bindtap="tz" wx:for="{{search}}" wx:key="index">
+      <image src="{{serverUrl}}{{item.faceImage}}" id="{{item.id}}"></image>
+      <view>{{item.name}}</view>
+    </view>
+    <view class="hr"></view>
+  </view>
+</view>

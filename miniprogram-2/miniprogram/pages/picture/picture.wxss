@@ -1,0 +1,107 @@
+.header{
+  height: 60px;
+  width: 100%;
+  background-color: #3bade6;
+  position: relative;
+  box-sizing: border-box;
+  border-top: 1px solid #fff;  
+}
+.header input{
+  box-sizing: border-box;
+  border-radius: 20px;
+  height: 40px;
+  width: 90%;
+  background-color: #fff;
+  margin:auto;
+  margin-top: 10px;
+  padding: 2px 40px 2px 20px;
+}
+.header image{
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  right: 7%;
+  position: absolute;
+  height: 30px;
+  width: 30px;
+}
+.title{
+  margin-top: 10px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #bbb;
+}
+.title view{
+  width: 20%;
+  text-align: center;
+  height: 80px;
+  box-sizing: border-box;
+}
+.title text{
+  display: block;
+  color: #bbb;
+  font-weight: bold;
+}
+.title image{
+  border-radius: 5px;
+ width: 70%;
+ height: 60%;
+}
+.jieguo{
+  height: 25px;
+  color: #000;
+  font-weight: bold;
+}
+scroll-view{
+  height: 80vh;
+}
+.item{
+  margin-top: 10px;
+  background-color: #eee;
+  border-radius: 7px;
+  height: 70px;
+  width: 100%;
+  display: flex;
+}
+.item image{
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin: auto 10px;
+}
+.item text{
+  display: block;
+}
+.item-top{
+  font-weight: bold;
+  margin-top: 13px;
+  margin-bottom: 5px;
+}
+.item-bottom{
+  font-size: 13px;
+  color: #bbb;
+}
+.xgtp{
+  position: relative;
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+}
+.xgtp image{
+  height: 100%;
+  width: 100%;
+}
+.xgtp view{
+  height: 6%;
+  background-color: #000;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  color: #fff;
+  text-align: center;
+  line-height: 6vh;
+}

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gpc.mapper.CheckInMapper" >
+  <resultMap id="BaseResultMap" type="com.gpc.pojo.CheckIn" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" property="id" jdbcType="VARCHAR" />
+    <result column="user_id" property="userId" jdbcType="VARCHAR" />
+    <result column="finish_time" property="finishTime" jdbcType="TIMESTAMP" />
+    <result column="finish_time_str" property="finishTimeStr" jdbcType="INTEGER" />
+    <result column="status" property="status" jdbcType="INTEGER" />
+    <result column="time_str" property="timeStr" jdbcType="VARCHAR" />
+  </resultMap>
+
+  <select id="selectById" resultMap="BaseResultMap">
+    select * from check_in
+    where
+    user_id = #{id}
+    ORDER BY
+    finish_time DESC
+  </select>
+
+  <select id="queryCheckInTime" resultMap="BaseResultMap" >
+    select finish_time , finish_time_str , time_str
+    from
+    check_in
+    where user_id = #{id}
+    ORDER by finish_time DESC
+    LIMIT ${currentPage},${pageSize}
+  </select>
+
+  <select id="queryCheckInDay" resultMap="BaseResultMap">
+    select finish_time_str
+    from
+    check_in
+    where user_id = #{id}
+    and
+    finish_time like '%${day}%'
+  </select>
+
+  <select id="queryCheckStatus" resultMap="BaseResultMap">
+    select id
+    from
+    check_in
+    where user_id = #{id}
+    and
+    finish_time like '%${day}%'
+  </select>
+</mapper>

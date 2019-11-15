@@ -1,0 +1,25 @@
+<view class="header">
+  <swiper indicator-dots circular autoplay>
+     <swiper-item><image src="/img/index/zh4.jpg"/></swiper-item>
+     <swiper-item><image src="/img/index/zh8.jpg"/></swiper-item>
+     <swiper-item><image src="/img/index/zh3.jpg"/></swiper-item>
+     <swiper-item><image src="/img/index/zh7.jpg"/></swiper-item>
+  </swiper>
+</view>
+
+<view class="content">
+<block wx:for="{{nav}}" wx:key="index">
+  <view class="img" id="{{index}}" bindtap="btn">
+    <image src="{{item.img}}"></image>
+    <view>{{item.name}}</view>
+  </view>
+</block>
+</view> 
+
+<view class="foot">
+  <view class="title"><image src="/img/index/gg.png"/>施工安全规范</view>
+  <view class="item"><image src="/img/index/xc1.jpg"/><image src="/img/index/xc2.jpg"/></view>
+  <view class="item"><image src="/img/index/xc3.jpg"/><image src="/img/index/xc4.jpg"/></view>
+  <view class="item"><image src="/img/index/xc5.jpg"/><image src="/img/index/xc6.jpg"/></view>
+  <view class="item"><image src="/img/index/xc7.jpg"/><image src="/img/index/xc8.jpg"/></view>
+</view>
