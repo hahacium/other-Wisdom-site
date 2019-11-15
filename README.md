@@ -33,12 +33,19 @@
 >  通过数据推送，将危险推送给管理员，在下边导航消息里面可以看到推送。员工看不到。可以通过登陆管理账号10000查看效果。
 ## 使用说明书
 为了方便使用，后端接口已在云端linux部署
+
 员工账号：10001  密码 123456
+
 管理： 10000 密码 123456
 ## 项目架构
 前端：微信小程序，js
+
 后端：springboot + mybatis
+
 相关组件：HttpClient、Apache commons、阿里巴巴Druid、spring-data-redis、小程序第三方搜索组件wsSearchView
+
 服务器端：Tomcat、Redis、Zookeeper、mysql
+
 项目依赖管理：Maven
+
 集群：mycat中间件 搭建mysql主从复制+读写分离环境，提高数据库性能。
